@@ -3,7 +3,11 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
     <link rel="stylesheet" href="css/styles.css">
     <!-- Bootstrap CSS -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -14,7 +18,7 @@
   </head>
   <body>
    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="index.html">GN MobileStore</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -74,11 +78,11 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <div class="container p-3" id="About" >
-      <div class="row justify-content-center bg-info">
-        <div class="col-4 text-center text-white">
-          <h2 class="font-weight-light text-center">About Us</h2>
-        </div>
+    <div class="container-fluid" id="About" >
+      <div class="row justify-content-center align-items-center sub-head">
+        <div class="col-6 text-white"> 
+          <h2 class="remove-whitespace font-weight-light text-center ">About</h2>
+        </div> 
       </div>
       <div class="row justify-content-center bg-light p-3">
         <div class="col-12 text-center">
@@ -91,10 +95,10 @@
         </div>
      </div>
     </div>
-  <div class="container p-3" id="Services">
-    <div class="row justify-content-center bg-info">
-      <div class="col-4 text-center text-white">
-        <h2 class="font-weight-light text-center">Services</h2>
+  <div class="container-fluid" id="Services">
+    <div class="row justify-content-center sub-head">
+      <div class="col-6  text-white text-center">
+        <h2 class="remove-whitespace font-weight-light text-center">Services</h2>
       </div>
     </div>
     <div class="row p-3 bg-light">
@@ -128,10 +132,10 @@
   </div>
 </div>
 
-<div class="container" id="contactUs">
-  <div class="row justify-content-center bg-info">
-    <div class="col-4 text-center text-white">
-      <h2 class="font-weight-light text-center">Contact Us</h2>
+<div class="container-fluid p-3" id="contactUs">
+  <div class="row justify-content-center sub-head">
+    <div class="col-6 text-white">
+      <h2 class="font-weight-light text-center remove-whitespace">Contact</h2>
     </div>
   </div>
   <div class="row justify-content-center p-3 bg-light">
@@ -142,11 +146,12 @@
     </div>
   </div>
   <br>
+  <div class="container-fluid p-3 ">
   <div class="row justify-content-center">
     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb bg-white">
-    <div class="card">
-      <img class="card-img-top" src="images/owner.jpg" style="height:300px;"  alt="Card image cap">
-      <div class="card-body">
+    <div class="card" style="height: 100%;">
+      <img class="card-img-top" src="images/owner.jpg"  style="height: 400px;" alt="Card image cap">
+      <div class="card-body owner">
         <h1 class="font-weight-light">Rohit Sachdeva</h1>
         <span><i class="fa fa-quote-left"></i> Owner <i class="fa fa-quote-right"></i></span>
       </div>
@@ -172,32 +177,32 @@
                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem  </p>
             </div>
         </div> -->
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb bg-info">
-          <div class="container">
-             <form>
-                <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 thumb">
+          <div class="container sub-head rounded" style="height: 100%;">
+             <form action="/send_email" method="post">
+                <div class="row justify-content-center p-3">
                    <div class="col-sm-12">
                     <div class="form-group">
                       <label for="formGroupExampleInput" class="text-white">Name</label>
-                      <input type="text" class="form-control rounded-0" id="formGroupExampleInput" placeholder="Enter your Name" required>
+                      <input type="text" name="name" class="form-control rounded-0" id="formGroupExampleInput" placeholder="Enter your Name" required>
                     </div>
                    </div>
                    <div class="col-sm-12">
                     <div class="form-group">
                       <label for="formGroupExampleInput" class="text-white">Email</label>
-                      <input type="email" class="form-control rounded-0" id="formGroupExampleInput" placeholder="Enter your email address" required>
+                      <input type="email" name="email" class="form-control rounded-0" id="formGroupExampleInput" placeholder="Enter your email address" required>
                     </div>
                    </div>
                    <div class="col-sm-12">
                     <div class="form-group">
                       <label for="formGroupExampleInput" class="text-white">Mobile No</label>
-                      <input type="text" class="form-control rounded-0" id="formGroupExampleInput" placeholder="Enter your Mobile Number" required>
+                      <input type="text" name="mobile" class="form-control rounded-0" id="formGroupExampleInput" placeholder="Enter your Mobile Number" required>
                     </div>
                    </div>
                    <div class="col-sm-12">
                     <div class="form-group">
                       <label for="formGroupExampleInput" class="text-white">Enquiry</label>
-                      <textarea type="textarea" class="form-control rounded-0" id="formGroupExampleInput" placeholder="Enter your Message" required></textarea>
+                      <textarea type="textarea" name="body" class="form-control rounded-0" id="formGroupExampleInput" placeholder="Enter your Message" required></textarea>
                     </div>
                    </div>
                    <div class="col-sm-12 text-center">
@@ -208,7 +213,7 @@
           </div>
        </div>
         </div>
-
+      </div>
     </div>
   </div>
 </div>
@@ -217,7 +222,7 @@
 <footer>
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3 bg-info text-white">© 2020 Copyright:
+  <div class="footer-copyright text-center py-3 sub-head text-white">© 2020 Copyright:
     <a href="www.google.com" class="text-white"> SRServices.com</a>
   </div>
   <!-- Copyright -->
